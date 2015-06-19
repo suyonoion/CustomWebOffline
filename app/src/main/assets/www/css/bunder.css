@@ -1,0 +1,123 @@
+/* CSS Document */
+@import url('css/reset.css');
+
+html,
+body{
+    word-wrap:break-word;
+	height: 100%;
+	width: 100%;
+	font-family: 'Sofadi One', cursive;
+}
+
+a{
+	text-decoration: none;
+	color: #C0C0C0;
+}
+
+input {
+height: 30px;
+width:97%;
+}
+
+.konten {
+    height:100%;
+}
+
+.kanan {
+text-align:right;
+}
+
+.circle {
+    font:normal 12px Arial,Sans-Serif;
+	color:#FFFFFF;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	/* width and height can be anything, as long as they're equal */
+}
+
+/* Create the animation blocks */
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+/* Spinning, gradient circle; CSS only! */
+#advanced {
+	color:#FFFFFF;
+	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+}
+		
+.transbox {
+	display:inline-block;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+#page1      {
+    
+    background-color:#84C922;
+	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, #84C922, blue);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+}
+#page2   {
+    
+	background-color:#00A7E2;
+	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, #00A7E2, red);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	}
+#page3       {
+    
+    background-color:#EE9A10;
+	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, #EE9A10, green);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+}
+#page4     {
+    
+    background-color:#DD1F8E;
+	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, #DD1F8E, brown);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+}
+#page5     {
+    
+    background-color:#620294;
+	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, #620294, yellow);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+}
+
+ul#nav {
+ width:100%;
+ height:30px;
+ background-color:#23a606;
+ top:0px;
+ left:0px;
+ padding:0px;
+ opacity: 0.6;
+ filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+ul#nav li {
+ display:inline;
+ float:left;
+}
+
+ul#nav li a {
+ font:bold 10px Arial,Sans-Serif;
+ text-decoration:none;
+ color:#C0C0C0;
+ display:block;
+ padding:8px 15px;
+}
+
+ul#nav li a:hover, ul#nav li a.active {
+ color:#fff;
+}

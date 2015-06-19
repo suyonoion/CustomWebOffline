@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suyono</title>
+<link rel="stylesheet" href="css/bunder.css" />
+<script src="js/kalkulator.js"></script>
+</head>
+<body align="center" id="page1">
+<ul id="nav">
+    <li><a class="active" href="index.html">Page1</a></li>
+    <li><a href="page2.html">Page2</a></li>
+    <li><a href="page3.html">Page3</a></li>
+    <li><a href="page4.html">Page4</a></li>
+    <li><a href="page5.html">Page5</a></li>
+</ul>
+<div class="konten">
+<form name="sci-calc" class="transbox">
+<table cellspacing="0" cellpadding="1">
+<tr>
+<td colspan="5" align="center"><input style="font:italic 17px Arial,Sans-Serif;" name="display"  class="kanan" id="advanced" value="0" SIZE="28" maxlength="25"></td>
+</tr>
+<tr>
+<td align="center"><input type="button"  id="advanced" class="circle" value=" exp " onClick="if (checkNum(this.form.display.value)) { exp(this.form) }"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value="  7  " onClick="addChar(this.form.display, '7')"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value="  8  " onClick="addChar(this.form.display, '8')"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value="  9  " onClick="addChar(this.form.display, '9')"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value="   /   " onClick="addChar(this.form.display, '/')"></td>
+</tr>
+<tr>
+<td align="center"><input type="button"  id="advanced" class="circle" value="   ln   " onClick="if (checkNum(this.form.display.value)) { ln(this.form) }"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value="  4  " onClick="addChar(this.form.display, '4')"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value="  5  " onClick="addChar(this.form.display, '5')"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value="  6  " onClick="addChar(this.form.display, '6')"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value="   *   " onClick="addChar(this.form.display, '*')"></td>
+</tr>
+<tr>
+<td align="center"><input type="button"  id="advanced" class="circle" value=" sqrt " onClick="if (checkNum(this.form.display.value)) { sqrt(this.form) }"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" onClick="addChar(this.form.display, '1')" value="  1  "></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value="  2  " onClick="addChar(this.form.display, '2')"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value="  3  " onClick="addChar(this.form.display, '3')"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value="   -   " onClick="addChar(this.form.display, '-')"></td>
+</tr>
+<tr>
+<td align="center"><input type="button"  id="advanced" class="circle" value="  sq  " onClick="if (checkNum(this.form.display.value)) { square(this.form) }"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value="  0  " onClick="addChar(this.form.display, '0')"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value="   .  " onClick="addChar(this.form.display, '.')"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value=" +/- " onClick="changeSign(this.form.display)"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value="   +  " onClick="addChar(this.form.display, '+')"></td>
+</tr>
+<tr>
+<td align="center"><input type="button"  id="advanced" class="circle" value="    (    " onClick="addChar(this.form.display, '(')"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value="cos" onClick="if (checkNum(this.form.display.value)) { cos(this.form) }"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value=" sin" onClick="if (checkNum(this.form.display.value)) { sin(this.form) }"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value=" tan" onClick="if (checkNum(this.form.display.value)) { tan(this.form) }"></td>
+<td align="center"><input type="button"  id="advanced" class="circle" value="   )   " onClick="addChar(this.form.display, ')')"></td>
+</tr>
+<tr>
+<td align="center"><input type="button"  id="advanced" value="clear" onClick="this.form.display.value = 0 "></td>
+<td align="center" colspan="3"><input type="button"  id="advanced" value="backspace" onClick="deleteChar(this.form.display)"></td>
+<td align="center"><input type="button"  id="advanced" value="enter" name="enter" onClick="if (checkNum(this.form.display.value)) { compute(this.form) }"></td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>

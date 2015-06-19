@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suyono</title>
+    <link rel="stylesheet" href="css/bunder.css" />
+</head>
+<body align="center" id="page2">
+<ul id="nav">
+    <li><a href="index.html">Page1</a></li>
+    <li><a class="active" href="page2.html">Page2</a></li>
+    <li><a href="page3.html">Page3</a></li>
+    <li><a href="page4.html">Page4</a></li>
+    <li><a href="page5.html">Page5</a></li>
+</ul>
+<div class="konten">
+
+    <canvas id="canvas" width="300px" height="300px">
+    </canvas>
+
+    <script>
+var canvas = document.getElementById("canvas");
+var ion= canvas.getContext("2d");
+var radius = canvas.height / 2;
+ion.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ion, radius);
+  drawNumbers(ion, radius);
+  drawTime(ion, radius);
+}
+
+function drawFace(ion, radius) {
+  var grad;
+  ion.beginPath();
+  ion.arc(0, 0, radius, 0, 2*Math.PI);
+  ion.fillStyle = 'white';
+  ion.fill();
+  grad = ion.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, 'white');
+  grad.addColorStop(1, '#333');
+  ion.strokeStyle = grad;
+  ion.lineWidth = radius*0.1;
+  ion.stroke();
+  ion.beginPath();
+  ion.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ion.fillStyle = '#333';
+  ion.fill();
+}
+
+function drawNumbers(ion, radius) {
+  var ang;
+  var num;
+  ion.font = radius*0.15 + "px arial";
+  ion.textBaseline="middle";
+  ion.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ion.rotate(ang);
+    ion.translate(0, -radius*0.85);
+    ion.rotate(-ang);
+    ion.fillText(num.toString(), 0, 0);
+    ion.rotate(ang);
+    ion.translate(0, radius*0.85);
+    ion.rotate(-ang);
+  }
+}
+
+function drawTime(ion, radius){
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ion, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ion, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ion, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ion, pos, length, width) {
+    ion.beginPath();
+    ion.lineWidth = width;
+    ion.lineCap = "round";
+    ion.moveTo(0,0);
+    ion.rotate(pos);
+    ion.lineTo(0, -length);
+    ion.stroke();
+    ion.rotate(-pos);
+}
+</script>
+
+</div>
+</body>
+</html>
