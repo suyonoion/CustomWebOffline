@@ -3,11 +3,11 @@ Custom WebView , akses index.html secara offline dari folder assets
 
 Code :
 
-<com.suyonoion.customweboffline.index
+`<com.suyonoion.customweboffline.index
         android:id="@+id/index"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        />
+        />`
 
 Demo : 
 
