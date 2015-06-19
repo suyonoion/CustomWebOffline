@@ -1,6 +1,10 @@
 # CustomWebOffline
 Custom WebView , akses index.html secara offline dari folder assets
 
+Permission :
+
+`<uses-permission android:name="android.permission.INTERNET"/>`
+
 Code :
 
 `<com.suyonoion.customweboffline.index
